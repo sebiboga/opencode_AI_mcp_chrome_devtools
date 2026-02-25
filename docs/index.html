@@ -66,20 +66,52 @@
             <strong>Important:</strong> When using Chrome with the Chrome DevTools MCP, you MUST start Chrome with specific flags. The MCP cannot launch Chrome itself - it connects to an already-running instance.
         </div>
 
+        <h2>Prerequisites</h2>
+        <p>Before using this project, ensure you have the following installed:</p>
+        <table>
+            <tr>
+                <th>Requirement</th>
+                <th>Version</th>
+                <th>Installation</th>
+            </tr>
+            <tr>
+                <td><strong>Google Chrome</strong></td>
+                <td>Latest</td>
+                <td><a href="https://www.google.com/chrome">Download</a></td>
+            </tr>
+            <tr>
+                <td><strong>Node.js</strong></td>
+                <td>18+</td>
+                <td><a href="https://nodejs.org">Download</a></td>
+            </tr>
+            <tr>
+                <td><strong>opencode</strong></td>
+                <td>Latest</td>
+                <td><a href="https://opencode.ai">Download</a></td>
+            </tr>
+        </table>
+
         <h2>Project Structure</h2>
         <pre>project/
+├── AGENTS.md                  # Agent guidelines
 ├── opencode.json              # MCP configuration
 ├── README.md                  # Project overview
+├── INSTRUCTIONS.md            # Detailed documentation
 ├── util/
-│   └── start-chrome-debug.bat # Chrome startup script
+│   ├── start-chrome-debug.bat # Chrome startup script (Windows)
+│   └── start-chrome-debug.sh # Chrome startup script (Mac/Linux)
 └── docs/
-    └── chrome-debug-mode.html  # This documentation</pre>
+    └── index.html             # This documentation</pre>
 
         <h2>Quick Start</h2>
         
         <div class="note">
-            <strong>Step 1:</strong> Run the batch script to start Chrome in debug mode:
-            <pre>util\start-chrome-debug.bat</pre>
+            <strong>Step 1:</strong> Run the startup script to start Chrome in debug mode:
+            <pre># Windows
+util\start-chrome-debug.bat
+
+# Mac/Linux (first time: chmod +x util/start-chrome-debug.sh)
+./util/start-chrome-debug.sh</pre>
         </div>
 
         <div class="note">
